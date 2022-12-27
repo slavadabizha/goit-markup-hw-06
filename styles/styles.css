@@ -71,7 +71,6 @@ header{
     color: var(--primary-brand);
     text-transform: uppercase;
     }
-
 .site-nav {
     display: flex;  
     margin: 0; 
@@ -90,25 +89,21 @@ header{
     line-height: 1.5;
     color: var(--dark);
     text-decoration: none;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
     }
     .nav-links::after {
         content: '';
         position: absolute;
         left: 0;
         bottom: 0;
-
         display: block;
         width: 100%;
-        height: 5px;
+        height: 4px;
+        border-radius: 2px;
         background-color: var(--primary-brand);
-        opacity: 0;
-        transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
-
-    }
-    .nav-links:hover::after {
         opacity: 1;
-    }
-       
+     }
+         
 .mail{
     display: flex;
     margin: 0;
@@ -127,20 +122,20 @@ header{
 .nav-links:focus
 {
     color: var(--primary-brand);
-    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    
 }
-.contacts {
-    font-family: 'Roboto';
-    font-style: normal;
+.contacts {     
     font-weight: 400;
     font-size: 16px;
     line-height: 1.5;
     text-decoration: none;
     color: var(--text);
-}
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    }
 .contacts:hover,
 .contacts:focus {
     color: var(--primary-brand);
+    
 }
 ul {
     list-style-type: none;
@@ -186,15 +181,14 @@ button
     border: none;
     border-radius: 4px;
     box-shadow: var(--card-shadow);
-
-    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-    
-}
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    }
 button:hover,
 button:focus {
     background-color: var(--primary-brand);
     color: #ffffff;
     box-shadow: var(--card-shadow);
+    
 }
 .card-content { 
     padding: 16px 32px 16px 32px;
@@ -213,6 +207,7 @@ button:focus {
         height: 40px;
         border-radius: 50%;
         background-color: var(--primary-brand);
+        transition: background 250ms cubic-bezier(0.4, 0, 0.2, 1);
     }
     .trailing_icons_icon {
         fill: #F4F4FD;
@@ -224,9 +219,6 @@ button:focus {
     cursor: pointer;
     }
 .card-title {
-    font-family: 'Roboto';
-    font-style: normal;
-    font-weight: 500;
     font-size: 20px;
     line-height: 1.2;
     letter-spacing: 0.02em;
@@ -259,7 +251,7 @@ button:focus {
 .main-button:focus {
     background-color: #404BBF;
     color: #ffffff
-}
+    }
 .feature {
     padding-top: 120px;
     padding-bottom: 120px;
@@ -384,11 +376,13 @@ img{
     border-radius: 4px;
     width: 100%;
     height: 100%;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
     }    
     .logo-icon-link:hover,
     .logo-icon-link:focus {
     color: var(--primary-brand);
     border: 1px solid var(--primary-brand);
+    
     }
     .logo-icon-company {
     fill: currentColor;
@@ -404,7 +398,8 @@ img{
         width: 264px;
         background-color: #ffffff;
         box-shadow: var(--card-shadow);
-        border-radius: 10px;
+        border-bottom-left-radius: 4px;
+        border-bottom-right-radius: 4px;
         overflow: auto;
         display: block;
         }
@@ -412,10 +407,12 @@ img{
     .team_list_img_wrapper:focus .overlay
     {   transform: translate(0, 0);
         cursor: pointer;
+        
     } 
     .team_list_img_wrapper{
         position: relative;
         overflow: hidden;
+        transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
     }
     .overlay
     {
@@ -431,7 +428,7 @@ img{
         padding-left: 32px;
         
         background-color: var(--primary-brand);
-        opacity: 50%;
+        opacity: 100%;
         overflow: hidden;
         transform: translate(0, 100%);
         transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -479,14 +476,14 @@ img{
     
 .portfolio-cards_item {
     flex-basis: calc((100% - 2 * 24px) / 3) ;
-    border: 1px solid #8e8f99;
-    border-radius: 10px;
+    border: 1px solid #E7E9FC;
+    
     overflow: hidden;
     }
     .portfolio-cards_item:hover,
     .portfolio-cards_item:focus
     { box-shadow: var(--card-shadow);
-      border-radius: 10px;
+      
       cursor: pointer;
     }
 .card-content_portfolio{
@@ -548,6 +545,7 @@ img{
     height: 40px;
     border-radius: 50%;
     background: rgba(255, 255, 255, 0.1);
+    transition: background 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .social-footer-icon {
     fill: #F4F4FD;
@@ -556,8 +554,10 @@ img{
 .social-footer-link:focus {
     background: #31D0AA;
     cursor: pointer;
+    
+      
 }
-
+/* /.backdrop */
 .backdrop {
 position: fixed;
 top: 0;
@@ -574,6 +574,8 @@ visibility: inherit;
     opacity: 0;
     visibility: hidden;
     pointer-events: none;
+    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    visibility: inherit;
 
 }
 .modal {
@@ -582,8 +584,10 @@ visibility: inherit;
     left: 50%;
     transform: translate(-50%, -50%);
     width: 408px;
-    height: 576px;
+    height: 584px;
+    border-radius: 4px;
     background-color: #FCFCFC;
+    margin: 0 auto;
 }
 
 .modal-close-btn {
@@ -596,11 +600,11 @@ visibility: inherit;
     width: 24px;
     height: 24px;
     border-radius: 50%;
-    background-color: transparent;
+    background-color: #E7E9FC;
     border: 1px solid #555555;
     padding: 0;
-    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-
+    
+    
 }
 .modal-close-btn:hover,
 .modal-close-btn:focus
@@ -611,6 +615,57 @@ transition: fill var(--success)}
 
 .modal-close-btn:hover .modal-close-btn-icon,
 .modal-close-btn:focus .modal-close-btn-icon
-{ fill: var(--accent);}
+{ fill: var(--accent);
+    
+}
 
 /* ==============MODAL WINDOW=========== */
+
+.contact-form {
+    width: 360px;
+    min-height: 336px;
+    padding: 40px;
+    margin: 0 auto;
+    box-shadow: 0 10px 10px 0 #cccccc;
+}
+.contact-form-input {
+    width: 100%;
+    height: 40px;
+    margin-bottom: 8px;
+    padding-left: 24px;
+    border: 1px solid #303030;
+
+}
+.contact-form-fildset {
+    margin-bottom: 20px;
+}
+
+.contact-form-message {
+    width: 360px;
+    height: 100px;
+    padding: 15px;
+    resize: none;
+    margin-bottom: 20px;
+
+}
+.contact-form-btn-wrapper {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 24px;
+}
+.contact-form-btn {
+    width: 169px;
+    height: 58px;
+    
+}
+.leave-your
+{
+    text-align: center;
+    margin: 0;
+    margin-top: 72px;
+    margin-bottom: 16px;
+     font-weight: 500;
+     font-size: 16px;
+     line-height: 24px;
+     letter-spacing: 0.02;
+     color: #2E2F42;}

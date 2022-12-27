@@ -18,6 +18,7 @@
     <link rel="stylesheet" href="./styles/styles.css"> 
   </head>
   <body>
+    
         <!--main page-->
     <header>
       <div class="container">
@@ -379,15 +380,24 @@
     </div>          
       </footer>
 
-      <div class="backdrop is-hidden" data-modal>
-      <div class="modal">
+  <div class="backdrop is-hidden" data-modal>
+    <div class="modal">
         <button type="button" class="modal-close-btn" data-modal-close>
           <svg class="modal-close-btn-icon" width="8px" height="8px">
             <use href="./images/icons.svg#icon-close"></use>
           </svg>
         </button>
+        <p class="leave-your">Leave your contacts and we will call you back</p>
+       <input type="text" class="contact-form-input" placeholder="name" name="user_name" required/>
+       <input type="text" class="contact-form-input" placeholder="Phone" name="user_phone" />
+       <input type="text" class="contact-form-input" placeholder="Email" name="user_email" />
+      <div class="contact-form-btn-wrapper">
+       <textarea name="contact-form-message"></textarea>
+       <button type="send" class="contact-form-btn">send</button>
       </div>
-      </div>
+    </div>
+  </div>
       <script src="./js/modal.js"></script>
+     
   </body>
 </html>
