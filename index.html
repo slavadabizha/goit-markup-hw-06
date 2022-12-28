@@ -18,8 +18,7 @@
     <link rel="stylesheet" href="./styles/styles.css"> 
   </head>
   <body>
-    
-        <!--main page-->
+            <!--main page-->
     <header>
       <div class="container">
         <div class="container-nav">
@@ -388,13 +387,21 @@
           </svg>
         </button>
         <p class="leave-your">Leave your contacts and we will call you back</p>
-       <input type="text" class="contact-form-input" placeholder="name" name="user_name" required/>
+        <form class="contact-form">
+          <p class="inputs">Name</p>
+       <input type="text" class="contact-form-input-name" placeholder="name" name="user_name" required/>
+       <p class="inputs">Phone</p>
        <input type="text" class="contact-form-input" placeholder="Phone" name="user_phone" />
+       <p class="inputs">Email</p>
        <input type="text" class="contact-form-input" placeholder="Email" name="user_email" />
+       <p class="inputs">Comment</p>
+       <input type="text" class="contact-form-input-commet" placeholder="text input" name="comment" />
+
       <div class="contact-form-btn-wrapper">
-       <textarea name="contact-form-message"></textarea>
+       
        <button type="send" class="contact-form-btn">send</button>
       </div>
+    </form>
     </div>
   </div>
       <script src="./js/modal.js"></script>
