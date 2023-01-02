@@ -755,8 +755,7 @@ transition: fill var(--success)}
         width: 264px;
         height: 40px;
         border: 1px solid rgba(255, 255, 255, 0.3);
-        opacity: 30%;
-             
+                   
         border-radius: 4px;
         padding-left: 16px;
         background-color: inherit;
@@ -766,24 +765,31 @@ transition: fill var(--success)}
         font-weight: 400;
         line-height: 24px;
         letter-spacing: 0.04;
-        color:rgba(255, 255, 255, 0.6)
+        color:rgba(255, 255, 255, 0.3)
     }
     .subscribe {
-        padding: 0;
         width: 165px;
-        height: 45px;
+        height: 40px;
+        
         align-self: center;
         margin-left: 24px;
-        background-color: ;var(--primary-brand);
-        color: #ffffff
+        background-color: var(--primary-brand);
+        color: #ffffff;
         font-family: 'Roboto';
         font-style: normal;
-        font-weight: 500;
+        font-weight: 400;
         font-size: 16px;
         line-height: 24px;
+        letter-spacing: 0.04;
         cursor: pointer;
        
         border-radius: 4px;
         box-shadow: var(--card-shadow);
         transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    .subscribe:hover,
+.subscribe:focus {
+    background-color: #ffffff;
+    color: var(--primary-brand);
+    box-shadow: var(--card-shadow);
     }
