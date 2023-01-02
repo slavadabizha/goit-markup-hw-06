@@ -336,7 +336,7 @@
       <!--footer-->
     </main>
       <footer class="footer">
-        <div class="container">
+      <div class="container">
         <div class="logo_container">
            <a href="./index.html" class="foot-logo"><span class="low-logo">web</span>studio</a>
            <p class="footer-text"> Increase the flow of customers and sales for your business with digital
@@ -375,8 +375,18 @@
                   </a>
               </li>
           </ul>
-      </div>  
-    </div>          
+       </div>  
+       <form class="email-input">
+      <div class="social_media">
+        <h3 class="title_social_media">Subscribe</h3>
+        <input type="email" name="email" class="footer-email" placeholder="E-mail" required/>
+        
+      </div>
+    </form>
+    <button type="subscribe" class="subscribe">subscribe</button>
+    </div>    
+    
+
       </footer>
 
   <div class="backdrop is-hidden" data-modal>
@@ -387,28 +397,52 @@
           </svg>
         </button>
         <p class="leave-your">Leave your contacts and we will call you back</p>
-        <form class="contact-form">
-          <p class="inputs">Name</p>
-       <input type="text" class="contact-form-input-name" placeholder="name" name="user_name" required/>
-       <p class="inputs">Phone</p>
-       <input type="text" class="contact-form-input" placeholder="Phone" name="user_phone" />
-       <p class="inputs">Email</p>
-       <input type="text" class="contact-form-input" placeholder="Email" name="user_email" />
-       <label for="comment">Comment</label>
-       <textarea name="comment" id="comment" placeholder="Text input"></textarea> 
+        
+        <form class="modal-form">
+
+          <label for="" class="modal-form-field">
+            <span class="modal-form-input-desc">Name</span>
+            <span class="modal-form-input-wrapper">
+
+            <input type="text" name="user_name" class="modal-form-input" required 
+            pattern="^[a-zA-Zа-яА-ЯіІїЇ]+$" minlength="2"/>
+            <svg class="icon-icon-name" width="12px" height="12px"><use href="./images/icons.svg#icon-name"></use></svg>
+            </span>
+          </label>
+
+          <label for="" class="modal-form-field">
+            <span class="modal-form-input-desc">Phone</span>
+            <span class="modal-form-input-wrapper">
+            <input type="tel" name="user_phone" class="modal-form-input" required 
+            pattern="^[0-9]{3}-[0-9]{3}-[0-9]{2}-[0-9]{2}" title="xxx-xxx-xx-xx"/>
+            <svg class="icon-icon-name" width="13px" height="13px"><use href="./images/icons.svg#icon-phone"></use></svg>
+          <span class="modal-form-input-icon"></span></span>
+        </label>
+
+          <label for="" class="modal-form-field">
+            <span class="modal-form-input-desc">Email</span>
+            <span class="modal-form-input-wrapper">
+            <input type="email" name="email" class="modal-form-input" required/>
+            <svg class="icon-icon-name" width="15px" height="12px"><use href="./images/icons.svg#icon-email"></use></svg>
+            <span class="modal-form-input-icon"></span></span>
+          </label>
        
-       <input type="checkbox" name="accept" value="accept" id="accept"/>
-       <label for="accept"> i accept the terms and conditions of the</label>
-       
-      <div class="contact-form-btn-wrapper">
-       
-       <button type="send" class="contact-form-btn">send</button>
-       
-      </div>
+      <label class="modal-form-filed">
+        <span class="modal-form-input-desc">Comment</span>
+       <textarea name="comment" class="modal-form-message" placeholder="Text input"></textarea> 
+       </label>
+
+       <input id="user-policy" type="checkbox" name="user_policy" class="modal-form-check"/>
+       <label for ="user-policy" class="modal-form-check-desc">
+         i accept the terms and conditions of the&nbsp;<a href="Privacy polisy">Privacy polisy</a></label>
+           
+      <button type="send" class="modal-form-submit">send</button>
+             
     </form>
     </div>
-  </div>
+    </div>
       <script src="./js/modal.js"></script>
-     
+         
+    </form>
   </body>
 </html>
