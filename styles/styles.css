@@ -770,9 +770,11 @@ transition: fill var(--success)}
         color:rgba(255, 255, 255, 0.3)
     }
     .subscribe {
+    display: flex;
         width: 165px;
         height: 40px;
-        
+        padding-left: 24px;
+        padding-top: 8px;
         align-self: center;
         margin-left: 24px;
         background-color: var(--primary-brand);
@@ -784,7 +786,7 @@ transition: fill var(--success)}
         line-height: 24px;
         letter-spacing: 0.04;
         cursor: pointer;
-       
+       padding-right: 16px;
         border-radius: 4px;
         box-shadow: var(--card-shadow);
         transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -795,3 +797,4 @@ transition: fill var(--success)}
     color: var(--primary-brand);
     box-shadow: var(--card-shadow);
     }
+    
