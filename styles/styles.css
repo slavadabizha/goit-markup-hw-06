@@ -810,12 +810,14 @@ visibility: inherit;
     }
     .icon-subscribe{ 
         margin-left: 16px;
-        margin-top: 8px;
-
+        
     }
     .subscribe:hover,
     .subscribe:focus {
     background-color: #ffffff;
     color: var(--primary-brand);
+        }
+        .form {
+            display: flex;
         }
     
