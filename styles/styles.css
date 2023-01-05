@@ -530,8 +530,7 @@ img{
     width: 264px;
 }
 .social_media {
-    display: block;
-    margin-left: 120px;   
+     margin-left: 80px;   
 }
 .title_social_media {
     margin: 0px 0px 16px 0px;
@@ -615,7 +614,7 @@ visibility: inherit;
     background-color: #E7E9FC;
     border: 1px solid opacity 10% #555555;
     padding: 0;
-    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
     
     
 }
@@ -789,13 +788,11 @@ visibility: inherit;
     input {
         color:rgba(255, 255, 255, 0.3)
     }
+               
     .subscribe {
-    display: flex;
+    
         width: 165px;
         height: 40px;
-        padding-left: 24px;
-        padding-top: 8px;
-        align-self: center;
         margin-left: 24px;
         background-color: var(--primary-brand);
         color: #ffffff;
@@ -806,10 +803,15 @@ visibility: inherit;
         line-height: 24px;
         letter-spacing: 0.04;
         cursor: pointer;
-       padding-right: 16px;
+        padding-right: 16px;
         border-radius: 4px;
         box-shadow: var(--card-shadow);
         transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    .icon-subscribe{ 
+        margin-left: 16px;
+        margin-top: 8px;
+
     }
     .subscribe:hover,
     .subscribe:focus {
